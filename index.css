@@ -221,12 +221,16 @@ textarea {
 	font-weight: 800;
 	font-size: 1.6rem;
 	margin-bottom: 1rem;
+	display:flex;
+	align-items:center;
+	justify-content:flex-start;
+	gap:10px;
 }
 .page-main .info-text{
-	font-weight:700;
+	display: inline-block;
+	font-weight:400;
 	font-size:1.4rem;
 	color:#ff0000;
-	margin-bottom:0.6rem;
 }
 
 .page-main .btn-container {
