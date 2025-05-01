@@ -222,6 +222,12 @@ textarea {
 	font-size: 1.6rem;
 	margin-bottom: 1rem;
 }
+.page-main .info-text{
+	font-weight:700;
+	font-size:1.4rem;
+	color:#ff0000;
+	margin-bottom:0.6rem;
+}
 
 .page-main .btn-container {
 	margin-top: 1rem;
