@@ -1,0 +1,305 @@
+@charset "UTF-8";
+* {
+	margin: 0;
+	padding: 0;
+	line-height: 1.37;
+}
+/* hidden */
+.hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+	font-size: 0;
+	color: transparent;
+}
+
+body {
+	font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic",
+		sans-serif;
+	line-height: 1.5;
+	color: #333;
+	background-color: #f9f9f9;
+	margin: 0;
+	padding: 20px;
+	font-size: 10px;
+}
+
+/* 제목 스타일링 */
+h1,
+h2,
+h3,
+th {
+	font-weight: 700;
+	color: #111;
+	margin: 0;
+}
+
+/* 표 스타일링 */
+.table-container {
+	width: 100%;
+	margin-bottom: 2rem;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+table th,
+table td {
+	border-bottom: 1px solid #ddd;
+	padding: 0.6rem 0;
+	font-size: 1.2rem;
+}
+
+table th {
+	background-color: #ddd;
+}
+
+/* 버튼 스타일링 */
+button {
+	font-family: inherit;
+	font-size: 0.9rem;
+	padding: 5px 12px;
+	cursor: pointer;
+	border: 1px solid #aaa;
+	background-color: #fff;
+	transition: all 0.2s ease;
+}
+
+button:hover {
+	background-color: #eee;
+}
+
+/* 입력 필드 스타일링 */
+input {
+	font-family: inherit;
+}
+input[type="text"] {
+	display: inline-block;
+	background-color: #ffffff;
+	color: #111111;
+	width: 100%;
+	height: 40px;
+	border-radius: 4px;
+}
+textarea {
+	font-family: inherit;
+	padding: 6px;
+	border: 1px solid #aaa;
+	box-sizing: border-box;
+	width: 100%;
+	margin-bottom: 0.5rem;
+}
+
+/* 코드 편집기 스타일링 */
+.code-editor {
+	font-family: "Pretendard", monospace;
+	background-color: #f0f0f0;
+	border: 1px solid #aaa;
+	padding: 1rem;
+	width: 100%;
+	box-sizing: border-box;
+	resize: vertical;
+}
+
+.btn-container {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.chart-wrapper {
+	display: flex;
+	align-items: flex-end;
+	position: relative;
+	margin-bottom: 20px;
+}
+.chart-wrapper::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 2px;
+	background-color: #111;
+	z-index: 0;
+}
+
+/* 왼쪽 Y축 라벨 영역 */
+.chart-axis-y {
+	width: 40px;
+	height: 150px;
+	position: sticky;
+	left: 0;
+	z-index: 2;
+	background-color: #fff;
+	border-right: 2px solid black;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-end;
+	padding-right: 4px;
+	font-size: 12px;
+}
+
+/* Y축 라벨 */
+.y-label {
+	position: relative;
+}
+.y-label.y-100 {
+	transform: translateY(-6px);
+}
+.y-label.y-0 {
+	transform: translateY(6px);
+}
+
+/* 가로 스크롤 영역 */
+.chart-scroll-x {
+	overflow-x: scroll;
+	overflow-y: hidden;
+	width: 100%;
+	position: relative;
+	transform: translateY(34px);
+}
+
+/* 차트 내부 */
+#chart.chart {
+	display: flex;
+	align-items: flex-end;
+	gap: 20px;
+	min-width: fit-content;
+	height: 150px;
+	padding: 0 10px;
+}
+
+/* 막대와 라벨을 묶는 그룹 */
+.chart-bar-group {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	width: 40px;
+}
+
+/* 막대 */
+.chart-bar {
+	width: 100%;
+	background-color: #ddd;
+	transition: height 0.2s ease;
+}
+
+/* X축 아래 숫자 */
+.chart-label {
+	margin-top: 4px;
+	font-size: 12px;
+}
+
+.page-main {
+}
+.page-main > section {
+	margin-bottom: 4rem;
+}
+.page-main .title {
+	font-weight: 800;
+	font-size: 2.2rem;
+	margin-bottom: 1rem;
+}
+.page-main .title-detail {
+	display: block;
+	text-align: right;
+	font-size: 1.4rem;
+}
+.page-main .sub-title {
+	font-weight: 800;
+	font-size: 1.6rem;
+	margin-bottom: 1rem;
+}
+
+.page-main .btn-container {
+	margin-top: 1rem;
+	padding: 0;
+}
+
+.page-main .input-number {
+	display: inline-block;
+	width: 100px;
+	font-size: 1.2rem;
+	text-align: center;
+	border: 0;
+	padding: 0;
+}
+.page-main .input-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+
+.input-item {
+	position: relative;
+	width: 150px;
+	height: 40px;
+	font-size: 1rem;
+}
+
+.input-item .input-text {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 16px 12px 4px;
+	font-size: 1rem;
+	border: 1px solid #aaa;
+	border-radius: 4px;
+	background-color: #fff;
+	z-index: 1;
+	box-sizing: border-box;
+}
+
+/* floating label */
+.input-item .input-label {
+	position: absolute;
+	top: 50%;
+	left: 12px;
+	transform: translateY(-50%);
+	font-size: 1rem;
+	color: #888;
+	pointer-events: none;
+	transition: all 0.2s ease;
+	background-color: #fff;
+	padding: 0 4px;
+	z-index: 2;
+}
+
+/* 포커스되거나 값이 있으면 위로 이동 */
+.input-item input:focus + .input-label,
+.input-item input:not(:placeholder-shown) + .input-label {
+	top: 4px;
+	font-size: 0.75rem;
+	color: #111;
+}
+
+.page-main .btn {
+	display: inline-block;
+	padding: 0;
+}
+.page-main .btn-outline {
+	background-color: #ffffff;
+	color: #111111;
+	border-radius: 4px;
+}
+
+.page-main .btn-sm {
+	width: 60px;
+	height: 40px;
+	font-size: 0.9rem;
+}

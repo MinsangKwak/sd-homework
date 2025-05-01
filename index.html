@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아이엠파인SD팀_자바스크립트개발자_면접과제-곽민상 제출</title>
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <main class="page-main">
+        <h1 class="title">과제 제출</h1>
+        <span class="title-detail">아이엠파인 SD팀 지원자 곽민상</span>
+        <!-- s: section-chart -->
+        <section class="section-chart" aria-labelledby="chart-heading">
+            <h2 class="sub-title" id="chart-heading">1. 그래프</h2>
+            <div class="chart-wrapper">
+                <div class="chart-axis-y">
+                    <div class="y-label y-100">100</div>
+                    <div class="y-label y-0">0</div>
+                </div>
+                <div class="chart-scroll-x">
+                    <div id="chart" class="chart"></div>
+                </div>
+            </div>
+        </section>
+        <!-- e: section-chart -->
+        <!-- s: section-edit -->
+        <section class="section-edit" aria-labelledby="edit-values-heading">
+            <h2 class="sub-title" id="edit-values-heading">2. 값 편집</h2>
+            <div class="table-container">
+                <table aria-label="값 편집 테이블">
+                    <colgroup>
+                        <col width="80px" />
+                        <col />
+                        <col width="60px" />
+                    </colgroup>
+                    <caption class="hidden">값 편집 테이블</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">값</th>
+                            <th scope="col">비고</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <tr>
+                            <td>0</td>
+                            <td><input type="number" class="input input-text input-number" value="70" data-id="" min="0" max="100" disabled></td>
+                            <td>
+                                <button type="button" class="btn btn-outline btn-delete" aria-label="데이터 삭제">삭제</button>
+                            </td>
+                        </tr> -->
+                        <!-- s: 데이터는 동적으로 생성됨 -->
+                        <!-- e: 데이터는 동적으로 생성됨 -->
+                    </tbody>
+                </table>
+                <div class="btn-container">
+                    <button type="button" class="btn btn-outline btn-apply" aria-label="편집한 값 적용">Apply</button>
+                </div>
+            </div>
+        </section>
+        <!-- e: section-edit -->
+        <section class="section-add" aria-labelledby="add-values-heading">
+            <h2 class="sub-title" id="add-values-heading">3. 값 추가</h2>
+            <div class="value-container">
+                <div class="input-wrapper">
+                    <div class="input-item">
+                        <label class="hidden" for="data-id-input">ID 입력</label>
+                        <input type="text" id="data-id-input" class="input input-text data-id" aria-required="true"
+                            placeholder=" " />
+                        <span class="input-label">ID</span>
+                    </div>
+                    <div class="input-item">
+                        <label class="hidden" for="data-value-input">값 입력</label>
+                        <input type="text" id="data-value-input" class="input input-text data-value"
+                            aria-required="true" placeholder=" " />
+                        <span class="input-label">Value</span>
+                    </div>
+                    <button type="button" class="btn btn-outline btn-sm btn-add" aria-label="입력한 값 추가">Add</button>
+                </div>
+            </div>
+        </section>
+        <section aria-labelledby="advanced-edit-heading">
+            <h2 class="sub-title" id="advanced-edit-heading">4. 값 고급 편집</h2>
+            <div class="code-container">
+                <label class="label textarea-label hidden" for="json-code-edit">JSON 데이터 직접 편집</label>
+                <textarea id="json-code-edit" class="textarea code-editor" aria-label="JSON 형식으로 데이터 직접 편집" rows="10">
+                    [
+                        {
+                            "id": 0,
+                            "value": 75
+                        },
+                        {
+                            "id": 1,
+                            "value": 20
+                        },
+                        {
+                            "id": 2,
+                            "value": 80
+                        },
+                        {
+                            "id": 3,
+                            "value": 100
+                        },
+                        {
+                            "id": 4,
+                            "value": 70
+                        }
+                    ]
+                </textarea>
+            </div>
+            <div class="btn-container">
+                <button type="button" class="btn btn-outline btn-sm btn-apply"
+                    aria-label="JSON 데이터 편집 적용">Apply</button>
+            </div>
+        </section>
+        <script src="main.js"></script>
+    </main>
+</body>
+
+</html>
