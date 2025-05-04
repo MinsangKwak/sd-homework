@@ -75,7 +75,7 @@ function initEvents() {
 		.addEventListener("click", applyChanges);
 	document.querySelector(".btn-add").addEventListener("click", addData);
 	document
-		.querySelector("#advanced-edit-heading ~ button")
+		.querySelector(".section-edit-advanced .btn-apply")
 		.addEventListener("click", applyJSONEdit);
 
 	document
